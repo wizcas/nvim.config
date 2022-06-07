@@ -5,8 +5,8 @@ require "wizcas.colorscheme"
 
 -- Plugin configs
 require "wizcas.cmp"
---require "wizcas.lsp"
---require "wizcas.telescope"
+require "wizcas.lsp"
+require "wizcas.telescope"
 --require "wizcas.treesitter"
 require "wizcas.autopairs"
 require "wizcas.comment"
