@@ -68,10 +68,12 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Easy system copy-paste --
-keymap("n", "<leader>y","\"+y",opts)
-keymap("n", "<leader>Y","\"+yg_",opts)
-keymap("v", "<leader>y","\"+y",opts)
-keymap("n", "<leader>p","\"+p",opts)
-keymap("n", "<leader>P","\"+P",opts)
-keymap("v", "<leader>p","\"+p",opts)
+keymap("n", "<leader>Y", '"+yg_', opts)
+keymap("n", "<leader>y", '"+y', opts)
+keymap("v", "<leader>y", '"+y', opts)
+keymap("n", "<leader>p", '"+p', opts)
+keymap("n", "<leader>P", '"+P', opts)
+keymap("v", "<leader>p", '"+p', opts)
 
+-- Paste in visual mode do not replace default yank --
+keymap("v", "p", '"_dP', opts)
