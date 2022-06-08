@@ -100,9 +100,6 @@ return packer.startup(function(use)
   -- Tmux Integration
   use "christoomey/vim-tmux-navigator"
 
-  -- Tmux Integration
-  use "christoomey/vim-tmux-navigator"
-
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
