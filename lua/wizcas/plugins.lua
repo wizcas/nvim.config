@@ -59,7 +59,7 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use 'tpope/vim-surround'
-  -- use 'jiangmiao/auto-pairs'
+  use 'github/copilot.vim'
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -96,6 +96,9 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
   use "tpope/vim-fugitive"
+
+  -- Tmux Integration
+  use "christoomey/vim-tmux-navigator"
 
   -- Tmux Integration
   use "christoomey/vim-tmux-navigator"
