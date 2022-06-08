@@ -26,10 +26,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<M-Up>", ":resize -2<CR>", opts)
+keymap("n", "<M-Down>", ":resize +2<CR>", opts)
+keymap("n", "<M-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<M-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -67,3 +67,13 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Easy system copy-paste --
+keymap("n", "<leader>Y", '"+yg_', opts)
+keymap("n", "<leader>y", '"+y', opts)
+keymap("v", "<leader>y", '"+y', opts)
+keymap("n", "<leader>p", '"+p', opts)
+keymap("n", "<leader>P", '"+P', opts)
+keymap("v", "<leader>p", '"+p', opts)
+
+-- Paste in visual mode do not replace default yank --
+keymap("v", "p", '"_dP', opts)
