@@ -2,6 +2,16 @@
 
 Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
 
+## Support italics font in tmux
+1. Run
+  ```shell
+  tic -x tmux.terminfo
+  ```
+2. Add this line in _.tmux.conf_
+  ```
+  set -g default-terminal "tmux-256color"
+  ```
+
 ## Try out this config
 
 Make sure to remove or move your current `nvim` directory
