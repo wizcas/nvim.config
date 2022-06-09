@@ -28,9 +28,16 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
+
+  augroup _auto_reload_file_changes
+    autocmd!
+    autocmd FocusGained,BufEnter * :checktime
+    " Run checktime in buffers, but avoiding the "Command Line" (q:) window
+    autocmd CursorHold * if getcmdwintype() == '' | checktime | endif
+  augroup end
 ]]
 
--- Autoformat
+-- " Autoformat
 -- augroup _lsp
 --   autocmd!
 --   autocmd BufWritePre * lua vim.lsp.buf.formatting()

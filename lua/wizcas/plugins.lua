@@ -61,6 +61,7 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'github/copilot.vim'
   use 'rmagatti/auto-session'
+  use 'tmux-plugins/vim-tmux-focus-events' -- This is needed for auto reloading file changes
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
