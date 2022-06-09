@@ -1,7 +1,10 @@
 require "wizcas.options"
 require "wizcas.keymaps"
 require "wizcas.plugins"
-require "wizcas.colorscheme"
+
+-- Color scheme
+require "wizcas.ayu"
+require "wizcas.colorscheme" -- apply the scheme at last
 
 -- Plugin configs
 require "wizcas.cmp"

@@ -160,7 +160,7 @@ bufferline.setup {
     --   guibg = {attribute='bg',highlight='TabLine'}
     --   },
     indicator_selected = {
-      guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
+      guifg = { attribute = "fg", highlight = "Special" },
       guibg = { attribute = "bg", highlight = "Normal" },
     },
   },
