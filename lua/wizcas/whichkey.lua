@@ -163,8 +163,8 @@ local mappings = {
   },
   m = {
     name = "Session",
-    s = { "<cmd>mksession session.log<cr>", "Save Session (./session.log)" },
-    r = { "<cmd>source session.log<cr>", "Load Session (./session.log)" },
+    r = { "<cmd>RestoreSession<cr>", "Restore Session" },
+    s = { "<cmd>SaveSession<cr>", "Save Session" },
   },
   s = {
     name = "Search",

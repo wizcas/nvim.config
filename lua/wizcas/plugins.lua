@@ -60,6 +60,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use 'tpope/vim-surround'
   use 'github/copilot.vim'
+  use 'rmagatti/auto-session'
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
