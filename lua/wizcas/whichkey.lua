@@ -161,6 +161,11 @@ local mappings = {
       "Workspace Symbols",
     },
   },
+  m = {
+    name = "Session",
+    s = { "<cmd>mksession session.log<cr>", "Save Session (./session.log)" },
+    r = { "<cmd>source session.log<cr>", "Load Session (./session.log)" },
+  },
   s = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },

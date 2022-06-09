@@ -79,4 +79,4 @@ keymap("v", "<leader>p", '"+p', opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Github Copilot resolve tab conflict with cmp --
-keymap("i", "<leader>j", 'copilot#Accept("")', { expr = true, silent = true, script = true })
+keymap("i", "<leader>,", 'copilot#Accept("")', { expr = true, silent = true, script = true })
