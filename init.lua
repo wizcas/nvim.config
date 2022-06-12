@@ -3,7 +3,8 @@ require "wizcas.keymaps"
 require "wizcas.plugins"
 
 -- Color scheme
-require "wizcas.ayu"
+require "wizcas.themes.ayu"
+require "wizcas.themes.tokyonight"
 require "wizcas.colorscheme" -- apply the scheme at last
 
 -- Plugin configs
