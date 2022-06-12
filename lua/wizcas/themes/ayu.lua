@@ -10,7 +10,7 @@ end
 colors.generate()
 
 ayu.setup({
-  mirage = false,
+  mirage = true,
   overrides = {
     LineNr = { fg = colors.guide_active },
     SpecialKey = { fg = colors.guide_active },
