@@ -63,6 +63,7 @@ return packer.startup(function(use)
   use 'rmagatti/auto-session'
   use 'tmux-plugins/vim-tmux-focus-events' -- This is needed for auto reloading file changes
   use 'sindrets/diffview.nvim'
+  use 'nvim-orgmode/orgmode'
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
