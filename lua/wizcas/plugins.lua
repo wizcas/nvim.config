@@ -64,6 +64,8 @@ return packer.startup(function(use)
   use 'tmux-plugins/vim-tmux-focus-events' -- This is needed for auto reloading file changes
   use 'sindrets/diffview.nvim'
   use 'nvim-orgmode/orgmode'
+  use 'dhruvasagar/vim-table-mode'
+  use 'lukas-reineke/headlines.nvim'
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
