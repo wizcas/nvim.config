@@ -63,9 +63,7 @@ return packer.startup(function(use)
   use 'rmagatti/auto-session'
   use 'tmux-plugins/vim-tmux-focus-events' -- This is needed for auto reloading file changes
   use 'sindrets/diffview.nvim'
-  use 'nvim-orgmode/orgmode'
   use 'dhruvasagar/vim-table-mode'
-  use 'lukas-reineke/headlines.nvim'
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -93,6 +91,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-symbols.nvim"
 
   -- Treesitter
   use {
@@ -107,6 +106,29 @@ return packer.startup(function(use)
 
   -- Tmux Integration
   use "christoomey/vim-tmux-navigator"
+
+  ----------- Note Taking ------------
+  -- use 'mickael-menu/zk-nvim'
+
+  -- Org mode
+  use 'nvim-orgmode/orgmode'
+
+  -- Markdown
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+  -- Telekasten
+  use "renerocksai/telekasten.nvim"
+  use "renerocksai/calendar-vim"
+
+  -- Neorg
+  use {
+    "nvim-neorg/neorg",
+    requires = "nvim-neorg/neorg-telescope",
+  }
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
