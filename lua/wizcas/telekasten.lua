@@ -1,4 +1,4 @@
-local home = vim.fn.expand('~/OneDrive/zk')
+local home = vim.fn.expand('~/OneDrive/footprints/zk')
 local ok, zk = pcall(require, 'telekasten')
 if not ok then
   return
@@ -173,7 +173,7 @@ keymap("n", "<leader>#", "<cmd>lua require('telekasten').show_tags()<CR>", opts)
 -- we could define [[ in **insert mode** to call insert link
 -- inoremap [[ <ESC>:lua require('telekasten').insert_link()<CR>
 -- alternatively: leader [
-keymap("i", "<leader>[", "<ESC>:lua require('telekasten').insert_link({ i=true })<CR>", opts)
+keymap("i", "<LocalLeader>[", "<ESC>:lua require('telekasten').insert_link({ i=true })<CR>", opts)
 keymap("i", "<leader>zt", "<ESC>:lua require('telekasten').toggle_todo({ i=true })<CR>", opts)
 keymap("i", "<leader>#", "<cmd>lua require('telekasten').show_tags({i = true})<cr>", opts)
 
