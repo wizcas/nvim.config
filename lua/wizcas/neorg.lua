@@ -9,10 +9,10 @@ neorg.setup({
     ["core.norg.dirman"] = {
       config = {
         workspaces = {
-          compass = "~/OneDrive/notes/neorgs/compass",
-          me = "~/OneDrive/notes/neorgs/wizcas",
-          journal = "~/OneDrive/notes/neorgs/journal",
-          todos = "~/OneDrive/notes/neorgs/todos",
+          compass = "~/Dropbox/footprints/neorgs/compass",
+          me = "~/Dropbox/footprints/neorgs/wizcas",
+          journal = "~/Dropbox/footprints/neorgs/journal",
+          todos = "~/Dropbox/footprints/neorgs/todos",
         }
       }
     },

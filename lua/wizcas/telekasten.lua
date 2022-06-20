@@ -1,4 +1,4 @@
-local home = vim.fn.expand('~/OneDrive/footprints/zk')
+local home = vim.fn.expand('~/Dropbox/footprints/zk')
 local ok, zk = pcall(require, 'telekasten')
 if not ok then
   return
