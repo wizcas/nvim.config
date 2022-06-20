@@ -11,8 +11,8 @@ neorg.setup({
         workspaces = {
           compass = "~/Dropbox/footprints/neorgs/compass",
           me = "~/Dropbox/footprints/neorgs/wizcas",
-          journal = "~/Dropbox/footprints/neorgs/journal",
-          todos = "~/Dropbox/footprints/neorgs/todos",
+          todo = "~/Dropbox/footprints/neorgs/todo",
+          tmp = "~/Dropbox/footprints/neorgs/tmp",
         }
       }
     },
@@ -21,15 +21,18 @@ neorg.setup({
     },
     ["core.norg.completion"] = {
       config = {
-        engine="nvim-cmp"
+        engine = "nvim-cmp"
       }
     },
     ["core.norg.journal"] = {
-      config = {}
+      config = {
+        workspace = "me",
+        strategy = "flat",
+      }
     },
     ["core.gtd.base"] = {
       config = {
-        workspace = "todos",
+        workspace = "todo",
       }
     },
     ["core.integrations.telescope"] = {},

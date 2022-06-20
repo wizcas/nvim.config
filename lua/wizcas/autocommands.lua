@@ -35,6 +35,12 @@ vim.cmd [[
     " Run checktime in buffers, but avoiding the "Command Line" (q:) window
     autocmd CursorHold * if getcmdwintype() == '' | checktime | endif
   augroup end
+
+  augroup _color_column
+    autocmd!
+    autocmd FileType norg set cc=+1
+    autocmd Filetype markdown set cc=+1
+  augroup end
 ]]
 
 -- " Autoformat
