@@ -34,7 +34,7 @@ zk.setup({
   -- 'title-uuid' - Suffix title with uuid
   new_note_filename = 'uuid-title',
   -- file uuid type ('rand' or input for os.date()')
-  uuid_type = '%Y-%m-%d-%H%M',
+  uuid_type = '%Y%m%d-%H%M',
   -- UUID separator
   uuid_sep = '-',
 
@@ -48,7 +48,7 @@ zk.setup({
 
   -- template for new notes (new_note, follow_link)
   -- set to `nil` or do not specify if you do not want a template
-  template_new_note = home .. '/templates/new.md',
+  template_new_note = home .. '/templates/new_note.md',
 
   -- template for newly created daily notes (goto_today)
   -- set to `nil` or do not specify if you do not want a template
@@ -82,7 +82,7 @@ zk.setup({
   insert_after_inserting = true,
 
   -- tag notation: '#tag', ':tag:', 'yaml-bare'
-  tag_notation = '#tag',
+  tag_notation = 'yaml-bare',
 
   -- command palette theme: dropdown (window) or ivy (bottom panel)
   command_palette_theme = 'ivy',
