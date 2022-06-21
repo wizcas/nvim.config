@@ -111,6 +111,9 @@ return packer.startup(function(use)
   ----------- Note Taking ------------
   -- use 'mickael-menu/zk-nvim'
 
+  -- Wiki
+  use 'vimwiki/vimwiki'
+
   -- Org mode
   use 'nvim-orgmode/orgmode'
 
