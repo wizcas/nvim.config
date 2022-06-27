@@ -1,6 +1,7 @@
 require "wizcas.options"
 require "wizcas.keymaps"
 require "wizcas.plugins"
+require "wizcas.cursor"
 
 -- Color scheme
 require "wizcas.themes.ayu"

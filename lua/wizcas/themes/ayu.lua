@@ -14,5 +14,7 @@ ayu.setup({
   overrides = {
     LineNr = { fg = colors.guide_active },
     SpecialKey = { fg = colors.guide_active },
+    IncSearch = { fg = colors.black, bg = colors.accent },
   },
 })
+
