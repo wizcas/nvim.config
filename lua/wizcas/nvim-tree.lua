@@ -60,11 +60,9 @@ nvim_tree.setup {
     ignore = true,
     timeout = 500,
   },
+  sort_by = "case_sensitive",
   view = {
-    width = 30,
-    height = 30,
-    hide_root_folder = false,
-    side = "left",
+    width = 50,
     mappings = {
       custom_only = false,
       list = {
@@ -73,8 +71,6 @@ nvim_tree.setup {
         { key = "v", cb = tree_cb "vsplit" },
       },
     },
-    number = false,
-    relativenumber = false,
   },
   trash = {
     cmd = "trash",
@@ -84,13 +80,13 @@ nvim_tree.setup {
     open_file = {
       quit_on_open = true,
       window_picker = {
-            enable = false,
+        enable = false,
       },
     },
   },
   renderer = {
     icons = {
-      glyphs= {
+      glyphs = {
         default = "",
         symlink = "",
         git = {
@@ -109,18 +105,8 @@ nvim_tree.setup {
           empty_open = "",
           symlink = "",
         },
-      }
-    }
-  } 
-
---  unknown options as of 22.05
---
---  update_to_buf_dir = {
---    enable = true,
---    auto_open = true,
---  },
---  auto_resize = true,
---  git_hl = 1,
---  root_folder_modifier = ":t",
-
+      },
+    },
+    root_folder_modifier = ":t",
+  },
 }
