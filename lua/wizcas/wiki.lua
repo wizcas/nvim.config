@@ -8,7 +8,12 @@ local dev_wiki = {
   syntax = 'markdown',
   ext = 'md'
 }
-vim.g.vimwiki_list = { personal_wiki, dev_wiki }
+local compass_wiki = {
+  path = '~/Dropbox/footprints/wiki/compass',
+  syntax = 'markdown',
+  ext = 'md'
+}
+vim.g.vimwiki_list = { personal_wiki, dev_wiki, compass_wiki }
 
 local keymap = vim.api.nvim_set_keymap
 keymap('n', '<LocalLeader>t', ':VimwikiToggleListItem<CR>', {
