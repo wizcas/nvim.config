@@ -20,5 +20,5 @@ configs.setup {
     enable = true,
     enable_autocmd = false,
   },
-  ensure_installed = { 'org' }
+  -- ensure_installed = { 'org' }
 }
