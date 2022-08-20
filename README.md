@@ -2,6 +2,16 @@
 
 Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
 
+## Prerequisites
+
+- Install tree-sitter
+  ```shell
+  yarn global add tree-sitter-cli
+  ```
+- Install `ripgrep`
+- On Ubuntu, install `clang` and `g++`
+- Install `lua-language-server`
+
 ## Support italics font in tmux
 1. Run
   ```shell
