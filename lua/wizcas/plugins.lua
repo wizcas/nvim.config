@@ -114,9 +114,6 @@ return packer.startup(function(use)
   -- Wiki
   use 'vimwiki/vimwiki'
 
-  -- Org mode
-  use 'nvim-orgmode/orgmode'
-
   -- Markdown
   use({
     "iamcco/markdown-preview.nvim",
@@ -126,12 +123,6 @@ return packer.startup(function(use)
   -- Telekasten
   use "renerocksai/telekasten.nvim"
   use "renerocksai/calendar-vim"
-
-  -- Neorg
-  use {
-    "nvim-neorg/neorg",
-    requires = "nvim-neorg/neorg-telescope",
-  }
 
 
   -- Automatically set up your configuration after cloning packer.nvim
