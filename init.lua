@@ -1,11 +1,10 @@
-local isVsCode = vim.fn.exists('g:vscode')
-print('isVsCode' .. isVsCode .. 'type' .. type(isVsCode))
+local isVsCode = vim.fn.exists('g:vscode') > 0
 
 require "wizcas.options"
 require "wizcas.keymaps"
 require "wizcas.plugins"
 
-if not isVsCode or isVsCode == 0 then
+if not isVsCode then
   require "wizcas.cursor"
   -- Color scheme
   require "wizcas.themes.ayu"
