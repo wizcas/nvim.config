@@ -21,6 +21,12 @@ Each video will be associated with a branch so checkout the one you are interest
   ```
   set -g default-terminal "tmux-256color"
   ```
+  
+## Troubleshooting
+
+__LSP error on Omnisharp: `cmd is not defined`__
+
+Go to Omnisharp install directory (inspect by `:LspInstallInfo`) and grant _Omnisharp_ executable permission.
 
 ## Try out this config
 
