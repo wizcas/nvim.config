@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use 'sindrets/diffview.nvim'
   use 'dhruvasagar/vim-table-mode'
   use 'psliwka/vim-smoothie' -- smooth scrolling
+  use { 'neoclide/coc.nvim', branch = 'release' }
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out

@@ -12,7 +12,7 @@ if not isVsCode then
   require "wizcas.colorscheme" -- apply the scheme at last
 
   -- Plugin configs
-  require "wizcas.cmp"
+  --[[ require "wizcas.cmp" ]]
   require "wizcas.lsp"
   require "wizcas.telescope"
   require "wizcas.treesitter"
@@ -32,7 +32,7 @@ if not isVsCode then
   require "wizcas.auto-session"
   require "wizcas.telekasten"
   require "wizcas.wiki"
-  -- require "wizcas.scroll"
+  require "wizcas.coc"
 else
   require "wizcas.autopairs"
   require "wizcas.comment"
