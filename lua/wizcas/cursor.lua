@@ -1,6 +1,6 @@
 vim.cmd [[
 " blink the cursor so it won't block the character
-set guicursor=n-v-c-sm:blinkwait100-blinkon100-blinkoff50,i-ci-ve:ver25,r-cr-o:hor20
+set guicursor=n-v-c-sm:blinkwait300-blinkon300-blinkoff300,i-ci-ve:ver25,r-cr-o:hor20
 
 " reset cursor in terminal
 augroup RestoreCursorShapeOnExit
