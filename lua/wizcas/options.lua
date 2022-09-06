@@ -37,6 +37,10 @@ local options = { backup = false, -- creates a backup file
   textwidth = 80, -- the number of characters in a line
 }
 
+if IsWindows() then
+  options.guifont = 'CaskaydiaCove NF:h16'
+end
+
 vim.opt.shortmess:append 'c'
 
 for k, v in pairs(options) do
