@@ -1,5 +1,7 @@
 local isVsCode = vim.fn.exists('g:vscode') > 0
 
+require "wizcas.helpers"
+require "wizcas.helpers"
 require "wizcas.options"
 require "wizcas.plugins"
 
@@ -30,7 +32,9 @@ if not isVsCode then
   require "wizcas.whichkey"
   require "wizcas.autocommands"
   require "wizcas.auto-session"
-  require "wizcas.telekasten"
+  if not IsWindows() then
+    require "wizcas.telekasten"
+  end
   require "wizcas.wiki"
   require "wizcas.coc"
 else
