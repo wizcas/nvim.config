@@ -38,7 +38,6 @@ vim.cmd [[
 
   augroup _color_column
     autocmd!
-    autocmd FileType norg set cc=+1
     autocmd Filetype markdown set cc=+1
   augroup end
 ]]
