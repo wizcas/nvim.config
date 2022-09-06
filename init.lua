@@ -31,12 +31,13 @@ if not isVsCode then
   require "wizcas.alpha"
   require "wizcas.whichkey"
   require "wizcas.autocommands"
-  require "wizcas.auto-session"
+  -- require "wizcas.auto-session"
   if not IsWindows() then
     require "wizcas.telekasten"
   end
   require "wizcas.wiki"
   require "wizcas.coc"
+  require "wizcas.neovide"
 else
   require "wizcas.autopairs"
   require "wizcas.comment"

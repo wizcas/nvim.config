@@ -4,6 +4,7 @@ Each video will be associated with a branch so checkout the one you are interest
 
 ## Prerequisites
 
+- Install Node.js > 14.14
 - Install tree-sitter
   ```shell
   yarn global add tree-sitter-cli
@@ -11,6 +12,13 @@ Each video will be associated with a branch so checkout the one you are interest
 - Install `ripgrep`
 - On Ubuntu, install `clang` and `g++`
 - Install `lua-language-server`
+
+### On Windows
+
+- Clone this repo to _%LOCALAPPDATA%/nvim_
+- Set the directories to the following files in the `PATH` environment
+  - nvim.exe
+  - rg.exe
 
 ## Support italics font in tmux
 1. Run
@@ -27,6 +35,8 @@ Each video will be associated with a branch so checkout the one you are interest
 __LSP error on Omnisharp: `cmd is not defined`__
 
 Go to Omnisharp install directory (inspect by `:LspInstallInfo`) and grant _Omnisharp_ executable permission.
+
+---
 
 ## Try out this config
 
