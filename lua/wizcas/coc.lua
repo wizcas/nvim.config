@@ -6,6 +6,6 @@ vim.cmd([[
 
 if IsVsCode() then
   vim.cmd [[
-    CocDisable
+    let g:coc_start_at_startup = v:false
   ]]
 end
