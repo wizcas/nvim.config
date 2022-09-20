@@ -2,8 +2,6 @@ require "wizcas.helpers"
 require "wizcas.options"
 require "wizcas.plugins"
 
-print("is vscode", IsVsCode())
-
 if not IsVsCode() then
   require "wizcas.keymaps"
   require "wizcas.cursor"
