@@ -25,5 +25,6 @@
         "snippet":       "\ue60b Snippet ",
         "typeParameter": "\uf728 TypeParam ",
         "default":       "\uf29c Default "
-    }
+    },
+    "Lua.telemetry.enable": true
 }
