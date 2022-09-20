@@ -2,6 +2,8 @@ require "wizcas.helpers"
 require "wizcas.options"
 require "wizcas.plugins"
 
+print("is vscode", IsVsCode())
+
 if not IsVsCode() then
   require "wizcas.keymaps"
   require "wizcas.cursor"
@@ -36,6 +38,7 @@ if not IsVsCode() then
   require "wizcas.coc"
   require "wizcas.neovide"
 else
+  print("Loading VSCode settings...")
   require "wizcas.autopairs"
   require "wizcas.comment"
   require "wizcas.impatient"

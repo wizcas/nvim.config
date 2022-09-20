@@ -3,5 +3,5 @@ function IsWindows()
 end
 
 function IsVsCode()
-  local isVsCode = vim.fn.exists('g:vscode') > 0
+  return vim.fn.exists('g:vscode') > 0
 end
