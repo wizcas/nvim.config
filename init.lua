@@ -29,6 +29,7 @@ if not IsVsCode() then
   require "wizcas.alpha"
   require "wizcas.whichkey"
   require "wizcas.autocommands"
+  require "wizcas.gitlinker"
   -- require "wizcas.auto-session"
   if not IsWindows() then
     require "wizcas.telekasten"
