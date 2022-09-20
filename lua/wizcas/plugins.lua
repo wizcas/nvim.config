@@ -60,7 +60,6 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use 'tpope/vim-surround'
   use 'github/copilot.vim'
-  -- use 'rmagatti/auto-session'
   use 'tmux-plugins/vim-tmux-focus-events' -- This is needed for auto reloading file changes
   use 'sindrets/diffview.nvim'
   use 'dhruvasagar/vim-table-mode'

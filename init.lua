@@ -1,5 +1,4 @@
 require "wizcas.helpers"
-require "wizcas.helpers"
 require "wizcas.options"
 require "wizcas.plugins"
 
@@ -30,7 +29,6 @@ if not IsVsCode() then
   require "wizcas.whichkey"
   require "wizcas.autocommands"
   require "wizcas.gitlinker"
-  -- require "wizcas.auto-session"
   if not IsWindows() then
     require "wizcas.telekasten"
   end
