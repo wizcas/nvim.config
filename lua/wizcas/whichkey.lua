@@ -91,6 +91,7 @@ local mappings = {
   ["Q"] = { "<cmd>q!<CR>", "FORCE quit" },
   ["x"] = { "<cmd>x<CR>", "Save & exit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  ["o"] = { "<cmd>on<CR>", "Close other panes" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",

@@ -5,9 +5,9 @@ Each video will be associated with a branch so checkout the one you are interest
 ## Prerequisites
 
 - Install Node.js > 14.14
-- Install tree-sitter
+- Install Node packages
   ```shell
-  yarn global add tree-sitter-cli
+  yarn global add tree-sitter-cli write-good
   ```
 - Install `ripgrep`
 - On Ubuntu, install `clang` and `g++`

@@ -1,0 +1,13 @@
+{
+    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.diagnostics.globals": [
+        "vim",
+        "tabline_bg",
+        "tabline_fg",
+        "normal_fg",
+        "normal_bg",
+        "tabline_sel_fg",
+        "tabline_sel_bg",
+        "special_fg"
+    ]
+}

@@ -64,7 +64,7 @@ return packer.startup(function(use)
   use 'sindrets/diffview.nvim'
   use 'dhruvasagar/vim-table-mode'
   use 'psliwka/vim-smoothie' -- smooth scrolling
-  use { 'neoclide/coc.nvim', branch = 'release' }
+  -- use { 'neoclide/coc.nvim', branch = 'release' }
   use 'ruifm/gitlinker.nvim'
 
   -- Colorschemes
@@ -74,12 +74,12 @@ return packer.startup(function(use)
   use "EdenEast/nightfox.nvim"
 
   -- cmp plugins
-  -- use "hrsh7th/nvim-cmp" -- The completion plugin
-  -- use "hrsh7th/cmp-buffer" -- buffer completions
-  -- use "hrsh7th/cmp-path" -- path completions
-  -- use "hrsh7th/cmp-cmdline" -- cmdline completions
-  -- use "saadparwaiz1/cmp_luasnip" -- snippet completions
-  -- use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

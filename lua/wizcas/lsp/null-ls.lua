@@ -14,13 +14,13 @@ null_ls.setup({
   debug = false,
   sources = {
     code_actions.eslint_d,
+    code_actions.gitsigns,
     formatting.prettier.with({
       extra_args = { "--single-quote" },
       prefer_local = "node_modules/.bin",
     }),
     formatting.black.with({ extra_args = { "--fast" } }),
-    formatting.stylua,
     formatting.eslint_d,
-    -- diagnostics.flake8
+    diagnostics.write_good,
   },
 })
