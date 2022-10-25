@@ -26,7 +26,14 @@ keymap("n", "<leader>h", ':noh<CR>', opts)
 keymap("n", "K", getVsCodeCmd(vscodeCmds['showHover']), opts)
 keymap("n", "gk", getVsCodeCmd(vscodeCmds['paramHints']), opts)
 keymap("n", "H", getVsCodeCmd(vscodeCmds['prevTab']),opts)
-keymap("n", "L", getVsCodeCmd(vscodeCmds['nextTab']),opts)
+keymap("n", "L", getVsCodeCmd(vscodeCmds['nextTab']),opts):
+keymap("n", "<M-h>", getVsCodeCmd(vscodeCmds['prevTab']), opts)
+keymap("n", "<M-l>", getVsCodeCmd(vscodeCmds['nextTab']), opts)
+keymap("n", "<LocalLeader>[", getVsCodeCmd(vscodeCmds['prevTab']), opts)
+keymap("n", "<LocalLeader>]", getVsCodeCmd(vscodeCmds['nextTab']), opts)
+-- for mac M-l & M-h
+keymap("n", "˙", ":bnext<CR>", opts)
+keymap("n", "¬", ":bprevious<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
