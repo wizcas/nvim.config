@@ -31,6 +31,31 @@ function _G.check_back_space()
   return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
 
+COC_WHICHKEY_LSP = {
+
+  name = "LSP (coc)",
+
+  f = { "<Plug>(coc-format)", "Format" },
+  F = { "<Plug>(coc-format-selected)", "Format Selected" },
+  r = { "<Plug>(coc-rename)", "Rename" },
+  a = { "<Plug>(coc-codeaction)", "Code Action" },
+  A = { "<Plug>(coc-codeaction-selected)", "Code Action Selected Region" },
+  l = { "<Plug>(coc-codelens-action)", "Code Lens Action" },
+  q = { "<Plug>(coc-fix-current)", "Quick Fix Current Line" },
+  o = { "<cmd>call CocActionAsync('runCommand', 'editor.action.organizeImport')<CR>", "Order Imports" },
+  c = {
+    name = "CoCL List",
+    a = { ":<C-u>CocList diagnostics<CR>", "Diagnostics" },
+    e = { ":<C-u>CocList extensions<CR>", "Extensions" },
+    c = { ":<C-u>CocList commands<CR>", "Commands" },
+    o = { ":<C-u>CocList outline<CR>", "Outline of Current Document" },
+    s = { ":<C-u>CocList -I symbols<CR>", "Workspace Symbols" },
+    j = { ":<C-u>CocNext<CR>", "Default Action For Next Item" },
+    k = { ":<C-u>CocPrev<CR>", "Default Action For Previous Item" },
+    p = { ":<C-u>CocListResume<CR>", "Resume Latest" },
+  },
+}
+
 -- Use tab for trigger completion with characters ahead and navigate.
 -- NOTE: There's always complete item selected by default, you may want to enable
 -- no select by `"suggest.noselect": true` in your configuration file.
@@ -78,7 +103,6 @@ end
 
 keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
 
-
 -- Highlight the symbol and its references when holding the cursor.
 vim.api.nvim_create_augroup("CocGroup", {})
 vim.api.nvim_create_autocmd("CursorHold", {
@@ -86,16 +110,6 @@ vim.api.nvim_create_autocmd("CursorHold", {
   command = "silent call CocActionAsync('highlight')",
   desc = "Highlight symbol under cursor on CursorHold"
 })
-
-
--- Symbol renaming.
-keyset("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
-
-
--- Formatting selected code.
-keyset("x", "<leader>f", "<Plug>(coc-format-selected)", { silent = true })
-keyset("n", "<leader>f", "<Plug>(coc-format-selected)", { silent = true })
-
 
 -- Setup formatexpr specified filetype(s).
 vim.api.nvim_create_autocmd("FileType", {
@@ -113,24 +127,7 @@ vim.api.nvim_create_autocmd("User", {
   desc = "Update signature help on jump placeholder"
 })
 
-
--- Applying codeAction to the selected region.
--- Example: `<leader>aap` for current paragraph
 local opts = { silent = true, nowait = true }
-keyset("x", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
-keyset("n", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
-
--- Remap keys for applying codeAction to the current buffer.
-keyset("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)
-
-
--- Apply AutoFix to problem on the current line.
-keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)
-
-
--- Run the Code Lens action on the current line.
-keyset("n", "<leader>cl", "<Plug>(coc-codelens-action)", opts)
-
 
 -- Map function and class text objects
 -- NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -142,7 +139,6 @@ keyset("x", "ic", "<Plug>(coc-classobj-i)", opts)
 keyset("o", "ic", "<Plug>(coc-classobj-i)", opts)
 keyset("x", "ac", "<Plug>(coc-classobj-a)", opts)
 keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
-
 
 -- Remap <C-f> and <C-b> for scroll float windows/popups.
 ---@diagnostic disable-next-line: redefined-local
@@ -176,24 +172,3 @@ vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'edito
 -- NOTE: Please see `:h coc-status` for integrations with external plugins that
 -- provide custom statusline: lightline.vim, vim-airline.
 vim.opt.statusline:prepend("%{coc#status()}%{get(b:,'coc_current_function','')}")
-
--- Mappings for CoCList
--- code actions and coc stuff
----@diagnostic disable-next-line: redefined-local
-local opts = { silent = true, nowait = true }
--- Show all diagnostics.
-keyset("n", "<space>a", ":<C-u>CocList diagnostics<cr>", opts)
--- Manage extensions.
-keyset("n", "<space>e", ":<C-u>CocList extensions<cr>", opts)
--- Show commands.
-keyset("n", "<space>c", ":<C-u>CocList commands<cr>", opts)
--- Find symbol of current document.
-keyset("n", "<space>o", ":<C-u>CocList outline<cr>", opts)
--- Search workspace symbols.
-keyset("n", "<space>s", ":<C-u>CocList -I symbols<cr>", opts)
--- Do default action for next item.
-keyset("n", "<space>j", ":<C-u>CocNext<cr>", opts)
--- Do default action for previous item.
-keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
--- Resume latest coc list.
-keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)

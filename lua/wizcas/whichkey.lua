@@ -133,7 +133,7 @@ local mappings = {
     },
   },
 
-  l = {
+  l = IS_COC and COC_WHICHKEY_LSP or {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     d = {
@@ -144,8 +144,7 @@ local mappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    --[[ f = { "<cmd>lua vim.lsp.buf.format({bufnr=bufnr})<cr>", "Format" }, ]]
-    f = { IS_COC and "<cmd>call CocAction('format')<CR>" or "<cmd>lua vim.lsp.buf.format({bufnr=bufnr})<cr>", "Format" },
+    f = { "<cmd>lua vim.lsp.buf.format({bufnr=bufnr})<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
     j = {
