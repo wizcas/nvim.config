@@ -1,7 +1,7 @@
 require "wizcas.helpers"
 require "wizcas.options"
 require "wizcas.plugins"
---[[ require "wizcas.globals" ]]
+require "wizcas.globals"
 
 if not IsVsCode() then
   require "wizcas.keymaps"
@@ -12,8 +12,12 @@ if not IsVsCode() then
   require "wizcas.colorscheme" -- apply the scheme at last
 
   -- Plugin configs
-  require "wizcas.lsp"
-  require "wizcas.cmp"
+  if IS_COC then
+    require "wizcas.coc"
+  else
+    require "wizcas.lsp"
+    require "wizcas.cmp"
+  end
   require "wizcas.telescope"
   require "wizcas.treesitter"
   require "wizcas.autopairs"
@@ -34,7 +38,6 @@ if not IsVsCode() then
     require "wizcas.telekasten"
   end
   require "wizcas.wiki"
-  --[[ require "wizcas.coc" ]]
   require "wizcas.neovide"
 else
   print("Loading VSCode settings...")
@@ -44,4 +47,3 @@ else
   require "wizcas.vscode-keys"
   require "wizcas.wiki"
 end
-

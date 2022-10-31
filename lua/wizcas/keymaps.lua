@@ -90,3 +90,4 @@ keymap("v", "p", '"_dP', opts)
 
 -- Github Copilot resolve tab conflict with cmp --
 keymap("i", "<leader>,", 'copilot#Accept("")', { expr = true, silent = true, script = true })
+vim.g.copilot_no_tab_map = true

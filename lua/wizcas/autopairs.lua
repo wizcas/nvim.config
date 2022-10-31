@@ -23,6 +23,7 @@ npairs.setup {
     highlight = "PmenuSel",
     highlight_grey = "LineNr",
   },
+  map_cr = false, -- Do not map <CR> for it conflicts with auto-completion plugins such as CoC
 }
 
 local cmp_plugin_ok, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")

@@ -99,7 +99,7 @@ local mappings = {
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-  ["R"] = { "<cmd>Telescope resume<cr>", "Resume Telescope"},
+  ["R"] = { "<cmd>Telescope resume<cr>", "Resume Telescope" },
 
   p = {
     name = "Packer",
@@ -144,7 +144,8 @@ local mappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { "<cmd>lua vim.lsp.buf.format({bufnr=bufnr})<cr>", "Format" },
+    --[[ f = { "<cmd>lua vim.lsp.buf.format({bufnr=bufnr})<cr>", "Format" }, ]]
+    f = { IS_COC and "<cmd>call CocAction('format')<CR>" or "<cmd>lua vim.lsp.buf.format({bufnr=bufnr})<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
     j = {
@@ -163,11 +164,6 @@ local mappings = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
     },
-  },
-  m = {
-    name = "Session",
-    r = { "<cmd>RestoreSession<cr>", "Restore Session" },
-    s = { "<cmd>SaveSession<cr>", "Save Session" },
   },
   s = {
     name = "Search",
