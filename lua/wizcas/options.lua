@@ -34,6 +34,7 @@ local options = { backup = false, -- creates a backup file
   sidescrolloff = 8,
   --[[ guifont = 'CaskaydiaCove Nerd Font Mono:h16', -- the font used in graphical neovim applications ]]
   guifont = 'VictorMono Nerd Font:h16', -- the font used in graphical neovim applications
+  --[[ guifont = 'FantasqueSansMono Nerd Font:h16', -- the font used in graphical neovim applications ]]
   autoread = true, -- automatically reload changed files
   textwidth = 80, -- the number of characters in a line
 }
