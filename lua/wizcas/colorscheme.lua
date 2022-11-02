@@ -1,8 +1,8 @@
 vim.cmd [[
+set background=dark
 try
-  colorscheme ayu
+  colorscheme night-owl
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
-  set background=dark
 endtry
 ]]

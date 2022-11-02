@@ -72,6 +72,7 @@ return packer.startup(function(use)
   use "Shatur/neovim-ayu"
   use "folke/tokyonight.nvim"
   use "EdenEast/nightfox.nvim"
+  use "haishanh/night-owl.vim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

@@ -6,7 +6,7 @@ require "wizcas.globals"
 if not IsVsCode() then
   require "wizcas.keymaps"
   require "wizcas.cursor"
-  -- Color scheme
+  -- Color schemes
   require "wizcas.themes.ayu"
   require "wizcas.themes.tokyonight"
   require "wizcas.colorscheme" -- apply the scheme at last
