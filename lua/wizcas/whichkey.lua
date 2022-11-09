@@ -81,8 +81,12 @@ local opts = {
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Buffers",
+    b = {
+      "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+      "Buffers",
+    },
+    c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+    o = { "<cmd>%bd|e#|bd#<CR>", "Close all other buffers" },
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["E"] = { "<cmd>e!<cr>", "Revert file changes" },
@@ -90,7 +94,6 @@ local mappings = {
   ["q"] = { "<cmd>q<CR>", "Quit" },
   ["Q"] = { "<cmd>q!<CR>", "FORCE quit" },
   ["x"] = { "<cmd>x<CR>", "Save & exit" },
-  ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["o"] = { "<cmd>on<CR>", "Close other panes" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
