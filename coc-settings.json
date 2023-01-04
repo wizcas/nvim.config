@@ -47,10 +47,12 @@
         // experimentals
         "staticcheck": true
       }
-    },
-    "golangci-server": {
-      "command": "golangci-server",
-      "filetypes": ["go"]
     }
+  },
+  "diagnostic-languageserver.filetypes": {
+    "sh": "shellcheck"
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "sh": "shfmt"
   }
 }
