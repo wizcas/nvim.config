@@ -27,10 +27,7 @@
     "typeParameter": "\uf728 TypeParam ",
     "default": "\uf29c Default "
   },
-  "[dart]": { 
-    "coc.preferences.formatOnSave": true
-  },
-  "[go]": {
+  "[*]": {
     "coc.preferences.formatOnSave": true
   },
   "Lua.telemetry.enable": true,
@@ -39,8 +36,21 @@
   "flutter.openDevLogSplitCommand": "botright 10split",
   "flutter.runDevToolsAtStartup": true,
   "languageserver": {
-  },
-  "go.goplsOptions": {
-    "gofumpt": true
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true,
+        "gofumpt": true,
+        "linkTarget": "godoc.org",
+        // experimentals
+        "staticcheck": true
+      }
+    },
+    "golangci-server": {
+      "command": "golangci-server",
+      "filetypes": ["go"]
+    }
   }
 }
