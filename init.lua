@@ -1,7 +1,7 @@
 require "wizcas.helpers"
 require "wizcas.options"
-require "wizcas.plugins"
 require "wizcas.globals"
+require "wizcas.plugins"
 
 if not IsVsCode() then
   require "wizcas.keymaps"

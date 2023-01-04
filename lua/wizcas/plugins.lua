@@ -64,7 +64,6 @@ return packer.startup(function(use)
   use 'sindrets/diffview.nvim'
   use 'dhruvasagar/vim-table-mode'
   use 'psliwka/vim-smoothie' -- smooth scrolling
-   use { 'neoclide/coc.nvim', branch = 'release' }
   use 'ruifm/gitlinker.nvim'
 
   -- Colorschemes
@@ -87,10 +86,13 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP
+  ---- native LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  --- coc eco
+  use { 'neoclide/coc.nvim', branch = 'release' }
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
