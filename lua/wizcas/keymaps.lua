@@ -45,8 +45,8 @@ keymap("n", "<M-[>", ":bprevious<CR>", opts)
 keymap("n", "˙", ":bnext<CR>", opts)
 keymap("n", "¬", ":bprevious<CR>", opts)
 -- for mac M-[ & M-]
-keymap("n", "“", ":bnext<CR>", opts)
-keymap("n", "‘", ":bprevious<CR>", opts)
+keymap("n", "‘", ":bnext<CR>", opts)
+keymap("n", "“", ":bprevious<CR>", opts)
 
 -- Move text up and down
 -- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
