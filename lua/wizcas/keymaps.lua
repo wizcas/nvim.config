@@ -42,8 +42,8 @@ keymap("n", "<LocalLeader>[", ":bprevious<CR>", opts)
 keymap("n", "<M-]>", ":bnext<CR>", opts)
 keymap("n", "<M-[>", ":bprevious<CR>", opts)
 -- for mac M-l & M-h
-keymap("n", "˙", ":bnext<CR>", opts)
-keymap("n", "¬", ":bprevious<CR>", opts)
+keymap("n", "¬", ":bnext<CR>", opts)
+keymap("n", "˙", ":bprevious<CR>", opts)
 -- for mac M-[ & M-]
 keymap("n", "‘", ":bnext<CR>", opts)
 keymap("n", "“", ":bprevious<CR>", opts)
